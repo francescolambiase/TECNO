@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TECNOengine — Custom engineering solutions for advanced manufacturing, materials characterisation, multi-material joining and AI-driven process optimisation. University of L'Aquila, Italy. Contract research available.">
+<meta name="keywords" content="custom engineering solutions advanced manufacturing Italy, contract research manufacturing materials University of L'Aquila, multi-material joining metal polymer composite, AI machine learning process optimisation manufacturing, electrically assisted joining patented, additive manufacturing PEEK ULTEM characterisation, critical raw materials recycling thermoplastics Italy, mechanical thermal characterisation polymers composites, custom AI industrial manufacturing Italy, digital twin manufacturing process, computer vision quality control manufacturing, conto terzi università ingegneria materiali, CIRTIBS">
+<meta property="og:title" content="TECNOengine — Custom Engineering for Advanced Manufacturing">
+<meta property="og:description" content="Contract research, materials testing and AI-driven process engineering. University of L'Aquila, Italy.">
+<title>TECNOengine — Custom Engineering Solutions for Advanced Manufacturing | University of L'Aquila</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold:    #C9A84C;
+  --gold-lt: #E8CC80;
+  --gold-dk: #8C6F28;
+  --gold-bg: #FAF6EC;
+  --dark:    #1E1D1B;
+  --dark2:   #2A2926;
+  --mid:     #555450;
+  --ter:     #888780;
+  --bg:      #F4F3EF;
+  --bg2:     #ECEAE4;
+  --bgc:     #FFFFFF;
+  --brd:     #DDDBD4;
+  --brdm:    #BFBDB6;
+  --r:       8px;
+  --rl:      12px;
+  --mw:      960px;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Trebuchet MS','Gill Sans','Segoe UI',sans-serif; background: var(--bg); color: var(--dark); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: var(--gold-dk); text-decoration: none; }
+a:hover { color: var(--gold); }
+.w { max-width: var(--mw); margin: 0 auto; padding: 0 28px; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+nav { background: var(--dark); border-bottom: 1px solid rgba(201,168,76,0.2); padding: 0 28px; position: sticky; top: 0; z-index: 100; }
+.nav-in { max-width: var(--mw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.nav-logo { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 20px; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.55); font-size: 13px; transition: color .2s; }
+.nav-links a:hover { color: #fff; }
+.lang-btn { background: transparent; border: 1px solid rgba(201,168,76,0.4); color: var(--gold); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 4px; cursor: pointer; letter-spacing: 0.08em; transition: all .2s; }
+.lang-btn:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+
+/* LOGO BANNER */
+.logo-banner { background: var(--dark2); border-bottom: 2px solid var(--gold); line-height: 0; }
+.logo-banner img { width: 100%; height: auto; display: block; }
+
+/* HERO */
+.hero { background: var(--bg); padding: 48px 28px; border-bottom: 1px solid var(--brd); }
+.hero-in { max-width: var(--mw); margin: 0 auto; display: flex; align-items: flex-start; gap: 36px; }
+.hero-left { flex: 1; min-width: 0; }
+.hero-right { width: 216px; flex-shrink: 0; background: var(--gold-bg); border: 1px solid #E8D89A; border-top: 3px solid var(--gold); border-radius: var(--rl); padding: 18px 20px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; color: var(--gold-dk); text-transform: uppercase; margin-bottom: 12px; }
+h1 { font-size: 28px; font-weight: 700; color: var(--dark); line-height: 1.18; margin-bottom: 14px; letter-spacing: -0.01em; }
+h1 em { color: var(--gold-dk); font-style: normal; }
+.hero-sub { font-size: 14px; color: var(--mid); line-height: 1.72; margin-bottom: 26px; max-width: 480px; }
+.hero-acts { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-p { background: var(--dark); color: #fff; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: var(--r); display: inline-block; transition: background .2s; }
+.btn-p:hover { background: #333230; color: #fff; }
+.btn-s { background: transparent; color: var(--mid); font-size: 13px; font-weight: 600; padding: 10px 22px; border-radius: var(--r); border: 1px solid var(--brdm); display: inline-block; transition: border-color .2s; }
+.btn-s:hover { border-color: var(--gold-dk); color: var(--dark); }
+.g-label { font-size: 9px; font-weight: 800; letter-spacing: 0.12em; color: var(--gold-dk); text-transform: uppercase; margin-bottom: 6px; }
+.g-amount { font-size: 28px; font-weight: 700; color: var(--dark); letter-spacing: -0.01em; margin-bottom: 6px; }
+.g-badge { display: inline-block; background: var(--gold); color: #fff; font-size: 9px; font-weight: 800; padding: 3px 9px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+.g-desc { font-size: 11px; color: var(--ter); line-height: 1.6; }
+.g-desc strong { color: var(--mid); }
+
+/* TAGLINE BAR */
+.tagbar { background: var(--dark); padding: 12px 28px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.tdot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.ttxt { font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 600; }
+.ttxt.g { color: var(--gold); }
+.ttxt.d { color: rgba(255,255,255,0.28); }
+
+/* SECTIONS */
+section { padding: 60px 28px; }
+section.alt { background: var(--bg2); }
+.slabel { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; color: var(--gold-dk); text-transform: uppercase; margin-bottom: 8px; }
+h2 { font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 8px; letter-spacing: -0.01em; }
+.ssub { font-size: 14px; color: var(--mid); margin-bottom: 36px; max-width: 540px; line-height: 1.65; }
+
+/* SERVICE CARDS */
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--brd); border: 1px solid var(--brd); border-radius: var(--rl); overflow: hidden; }
+.svc-card { background: var(--bgc); padding: 24px 26px; transition: background .2s; }
+.svc-card:hover { background: #FDFCFA; }
+.svc-num { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; color: var(--gold-dk); margin-bottom: 10px; text-transform: uppercase; }
+h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.svc-body { font-size: 13px; color: var(--mid); line-height: 1.65; }
+
+/* AI HIGHLIGHT CARD */
+.ai-card { background: var(--dark); border-radius: var(--rl); padding: 28px 32px; margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.ai-card-left { color: #fff; }
+.ai-label { font-size: 10px; font-weight: 800; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
+.ai-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; line-height: 1.25; }
+.ai-body { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+.ai-items { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.ai-items li { font-size: 13px; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+.ai-items li::before { content: ''; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 6px; }
+.ai-card-right { display: flex; flex-direction: column; gap: 10px; }
+.ai-tag { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25); border-radius: var(--r); padding: 12px 14px; }
+.ai-tag-title { font-size: 12px; font-weight: 700; color: var(--gold-lt); margin-bottom: 4px; }
+.ai-tag-desc { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+.ai-diff { margin-top: 6px; padding: 12px 14px; border-left: 2px solid var(--gold); }
+.ai-diff-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; font-style: italic; }
+
+/* DUAL CHANNEL */
+.channels { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 36px; }
+.channel { border-radius: var(--rl); padding: 20px 22px; }
+.channel-1 { background: var(--dark); }
+.channel-2 { background: var(--dark); border: none; }
+.ch-label { font-size: 9px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+.channel-1 .ch-label { color: var(--gold); }
+.channel-2 .ch-label { color: var(--gold); }
+.ch-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+.channel-1 .ch-title { color: #fff; }
+.channel-2 .ch-title { color: #fff; }
+.ch-body { font-size: 13px; line-height: 1.65; }
+.channel-1 .ch-body { color: rgba(255,255,255,0.65); }
+.channel-2 .ch-body { color: rgba(255,255,255,0.65); }
+.ch-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.ch-tag { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 3px; }
+.channel-1 .ch-tag { background: rgba(201,168,76,0.15); color: var(--gold-lt); }
+.channel-2 .ch-tag { background: rgba(201,168,76,0.15); color: var(--gold-lt); }
+@media (max-width: 580px) { .channels { grid-template-columns: 1fr; } }
+
+/* PATENT SECTION */
+.patent-header { background: var(--dark); border-radius: var(--rl) var(--rl) 0 0; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.patent-header-left { }
+.patent-header-label { font-size: 9px; font-weight: 800; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; margin-bottom: 5px; }
+.patent-header-title { font-size: 16px; font-weight: 700; color: #fff; }
+.patent-header-count { background: var(--gold); color: var(--dark); font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 4px; letter-spacing: 0.06em; white-space: nowrap; }
+.patent-list { border: 1px solid var(--brd); border-top: none; border-radius: 0 0 var(--rl) var(--rl); overflow: hidden; margin-top: 0; }
+.patent-item { background: var(--bgc); border-bottom: 1px solid var(--brd); padding: 16px 20px; display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: start; transition: background .15s; }
+.patent-item:last-child { border-bottom: none; }
+.patent-item:hover { background: #FDFCFA; }
+.patent-nr { font-size: 10px; font-weight: 800; color: var(--gold-dk); letter-spacing: 0.06em; white-space: nowrap; margin-top: 2px; }
+.patent-body { }
+.patent-name { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+.patent-meta { font-size: 12px; color: var(--ter); line-height: 1.5; }
+.patent-link { font-size: 11px; color: var(--gold-dk); white-space: nowrap; margin-top: 2px; }
+.patent-link a { color: var(--gold-dk); text-decoration: underline; }
+.patent-eu { display: inline-block; font-size: 9px; font-weight: 800; background: var(--gold-bg); border: 1px solid #E8D89A; color: var(--gold-dk); padding: 1px 6px; border-radius: 3px; letter-spacing: 0.06em; margin-left: 6px; vertical-align: middle; }
+
+/* EQUIPMENT */
+.equip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--brd); border: 1px solid var(--brd); border-radius: var(--rl); overflow: hidden; }
+.equip-item { background: var(--bgc); padding: 14px 18px; display: flex; align-items: flex-start; gap: 12px; transition: background .15s; }
+.equip-item:hover { background: #FDFCFA; }
+.edot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 7px; }
+.ename { font-size: 13px; font-weight: 600; color: var(--dark); }
+.espec { font-size: 12px; color: var(--ter); margin-top: 2px; }
+
+/* SECTORS */
+.sec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.sec-card { background: var(--bgc); border: 1px solid var(--brd); border-top: 3px solid var(--gold-dk); border-radius: var(--rl); padding: 20px 22px; transition: border-top-color .2s; }
+.sec-card:hover { border-top-color: var(--gold); }
+.sec-name { font-size: 11px; font-weight: 800; color: var(--gold-dk); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+.sec-list { font-size: 12px; color: var(--mid); line-height: 1.75; padding-left: 14px; }
+.sec-list li { margin-bottom: 3px; }
+
+/* AFFILIATION */
+.affil-box { background: var(--bgc); border: 1px solid var(--brd); border-radius: var(--rl); padding: 28px 32px; display: flex; align-items: flex-start; gap: 24px; flex-wrap: wrap; }
+.affil-badge { background: var(--dark); color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: 0.06em; padding: 10px 16px; border-radius: var(--r); flex-shrink: 0; align-self: flex-start; }
+.affil-text { font-size: 14px; color: var(--mid); line-height: 1.7; }
+.affil-text strong { color: var(--dark); }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--brd); border: 1px solid var(--brd); border-radius: var(--rl); overflow: hidden; }
+.contact-panel { background: var(--bgc); padding: 32px 36px; }
+.clabel { font-size: 10px; font-weight: 800; letter-spacing: 0.12em; color: var(--gold-dk); text-transform: uppercase; margin-bottom: 14px; }
+.cname { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+.crole { font-size: 13px; color: var(--ter); margin-bottom: 16px; }
+.citem { font-size: 14px; color: var(--mid); margin-bottom: 6px; }
+.citem a { color: var(--gold-dk); }
+.cnote { font-size: 12px; color: var(--ter); margin-top: 14px; line-height: 1.6; }
+
+/* FOOTER */
+footer { background: var(--dark); border-top: 1px solid rgba(201,168,76,0.15); padding: 24px 28px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 0.02em; }
+footer a { color: rgba(255,255,255,0.35); }
+footer a:hover { color: var(--gold); }
+
+/* LANG */
+.lang-it [data-lang="en"] { display: none !important; }
+.lang-en [data-lang="it"] { display: none !important; }
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  h1 { font-size: 22px; }
+  .hero-in { flex-direction: column; }
+  .hero-right { width: 100%; }
+  .ai-card { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .nav-links a:not(.lang-btn) { display: none; }
+}
+</style>
+</head>
+<body class="lang-en">
+
+<!-- NAV -->
+<nav>
+  <div class="nav-in">
+    <div class="nav-logo">TECNO<span>engine</span></div>
+    <div class="nav-links">
+      <a href="#services" data-lang="en">Services</a>
+      <a href="#services" data-lang="it">Servizi</a>
+      <a href="#ai" data-lang="en">AI Solutions</a>
+      <a href="#ai" data-lang="it">Soluzioni AI</a>
+      <a href="#equipment" data-lang="en">Equipment</a>
+      <a href="#equipment" data-lang="it">Attrezzature</a>
+      <a href="#sectors" data-lang="en">Experience</a>
+      <a href="#sectors" data-lang="it">Esperienza</a>
+      <a href="#contact" data-lang="en">Contact</a>
+      <a href="#contact" data-lang="it">Contatti</a>
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">IT</button>
+    </div>
+  </div>
+</nav>
+
+<!-- LOGO BANNER -->
+<div class="logo-banner">
+  <img src="tecno_logo.png" alt="TECNOengine — Make Future Come True — University of L'Aquila">
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-in">
+    <div class="hero-left">
+      <p class="eyebrow">University of L'Aquila · DIIIE · CIRTIBS</p>
+      <h1 data-lang="en">Custom Engineering Solutions<br>for <em>Advanced Manufacturing</em></h1>
+      <h1 data-lang="it">Soluzioni di Ingegneria Custom<br>per la <em>Manifattura Avanzata</em></h1>
+      <p style="font-size:16px;font-weight:600;color:var(--gold-dk);margin-bottom:14px;letter-spacing:0.01em;" data-lang="en">Your objectives, our expertise, a shared strategy.</p>
+      <p style="font-size:16px;font-weight:600;color:var(--gold-dk);margin-bottom:14px;letter-spacing:0.01em;" data-lang="it">I tuoi obiettivi, la nostra expertise, una strategia condivisa.</p>
+      <p class="hero-sub" data-lang="en">TECNOengine works with industrial partners in two ways: structured research partnerships on complex, multi-year challenges — and direct technical services for specific, urgent needs. Same expertise, different scope and timeline.</p>
+      <p class="hero-sub" data-lang="it">TECNOengine collabora con i partner industriali in due modi: partnership di ricerca strutturate su sfide complesse e pluriennali — e servizi tecnici diretti per esigenze specifiche e urgenti. Stessa competenza, scope e tempi diversi.</p>
+      <div class="hero-acts">
+        <a href="#contact" class="btn-p" data-lang="en">Start a collaboration</a>
+        <a href="#contact" class="btn-p" data-lang="it">Avvia una collaborazione</a>
+        <a href="#services" class="btn-s" data-lang="en">Our services</a>
+        <a href="#services" class="btn-s" data-lang="it">I nostri servizi</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="g-label">FIS3 Advanced Grant</div>
+      <div class="g-amount">€ 1.89M</div>
+      <div><span class="g-badge">FIS3 Winner 2025</span></div>
+      <div class="g-desc" data-lang="en"><strong>Project PROMETHEUS</strong> — multi-physics process optimisation. Italian National Science Fund. Competitive national selection.</div>
+      <div class="g-desc" data-lang="it"><strong>Progetto PROMETHEUS</strong> — ottimizzazione multi-fisica di processo. Fondo Italiano per la Scienza. Selezione nazionale competitiva.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAGLINE BAR -->
+<div class="tagbar">
+  <div class="tdot"></div>
+  <div class="ttxt g">Make Future Come True</div>
+  <div class="tdot"></div>
+  <div class="ttxt d" data-lang="en">Research partnerships · Direct technical services · 8 industrial partners · University of L'Aquila · CIRTIBS network</div>
+  <div class="ttxt d" data-lang="it">Partnership di ricerca · Servizi tecnici diretti · 8 partner industriali · University of L'Aquila · Rete CIRTIBS</div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="w">
+    <p class="slabel" data-lang="en">What we do</p>
+    <p class="slabel" data-lang="it">Cosa facciamo</p>
+    <h2 data-lang="en">Core engineering services</h2>
+    <h2 data-lang="it">Servizi ingegneristici principali</h2>
+    <p class="ssub" data-lang="en">Every engagement is built around your specific challenge. We work with industrial partners through two complementary paths.</p>
+    <p class="ssub" data-lang="it">Ogni collaborazione è costruita attorno alla tua sfida specifica. Lavoriamo con i partner industriali attraverso due percorsi complementari.</p>
+
+    <div class="channels">
+      <div class="channel channel-1">
+        <div class="ch-label" data-lang="en">Research partnership</div>
+        <div class="ch-label" data-lang="it">Partnership di ricerca</div>
+        <div class="ch-title" data-lang="en">Complex challenges,<br>structured collaboration</div>
+        <div class="ch-title" data-lang="it">Sfide complesse,<br>collaborazione strutturata</div>
+        <div class="ch-body" data-lang="en">For multi-faceted industrial problems requiring sustained R&D effort. We can support access to national and EU funding programmes (MISE, MASE, PNRR, Horizon), co-developing the project with you. Typical duration: 12–36 months.</div>
+        <div class="ch-body" data-lang="it">Per problemi industriali articolati che richiedono un impegno R&D continuativo. Possiamo supportare l'accesso a programmi di finanziamento nazionali ed europei (MISE, MASE, PNRR, Horizon), co-sviluppando il progetto. Durata tipica: 12–36 mesi.</div>
+        <div class="ch-tags">
+          <span class="ch-tag" data-lang="en">Co-funded R&D</span>
+          <span class="ch-tag" data-lang="it">R&D co-finanziata</span>
+          <span class="ch-tag" data-lang="en">Multi-year</span>
+          <span class="ch-tag" data-lang="it">Pluriennale</span>
+          <span class="ch-tag" data-lang="en">IP co-ownership</span>
+          <span class="ch-tag" data-lang="it">Co-titolarità IP</span>
+        </div>
+      </div>
+      <div class="channel channel-2">
+        <div class="ch-label" data-lang="en">Technical services</div>
+        <div class="ch-label" data-lang="it">Servizi tecnici</div>
+        <div class="ch-title" data-lang="en">Specific needs,<br>fast turnaround</div>
+        <div class="ch-title" data-lang="it">Esigenze specifiche,<br>risposta rapida</div>
+        <div class="ch-body" data-lang="en">For well-defined, bounded problems: characterising a component, validating a process, developing an AI model on your data, testing a joining solution. Defined scope, agreed deliverables, direct agreement. Typical duration: 4–16 weeks.</div>
+        <div class="ch-body" data-lang="it">Per problemi ben definiti e circoscritti: caratterizzare un componente, validare un processo, sviluppare un modello AI sui tuoi dati, testare una soluzione di giunzione. Scope definito, deliverable concordati, accordo diretto. Durata tipica: 4–16 settimane.</div>
+        <div class="ch-tags">
+          <span class="ch-tag" data-lang="en">Direct agreement</span>
+          <span class="ch-tag" data-lang="it">Accordo diretto</span>
+          <span class="ch-tag" data-lang="en">Fixed scope</span>
+          <span class="ch-tag" data-lang="it">Scope definito</span>
+          <span class="ch-tag" data-lang="en">4–16 weeks</span>
+          <span class="ch-tag" data-lang="it">4–16 settimane</span>
+        </div>
+      </div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 01</div>
+        <div class="svc-num" data-lang="it">Servizio 01</div>
+        <h3 data-lang="en">Mechanical &amp; thermal characterisation</h3>
+        <h3 data-lang="it">Caratterizzazione meccanica e termica</h3>
+        <p class="svc-body" data-lang="en">Quasi-static (standard and customized) testing from –130 °C to +330 °C, and dynamic mechanical testing DMA up to +600 °C, DMA, DSC, thermal imaging (FLIR A615 with wide set of lens, up to 2000 °C). Metals, polymers, composites, powders, and additive manufacturing components.</p>
+        <p class="svc-body" data-lang="it">Test quasi-statici (standard e personalizzati) da –130 °C a +330 °C e test dinamici dino a 600°C, DMA, DSC, termografia (FLIR A615 un ampio set di lenti, fino a 2000 °C). Metalli, polimeri, compositi, polveri e componenti AM.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 02</div>
+        <div class="svc-num" data-lang="it">Servizio 02</div>
+        <h3 data-lang="en">Multi-material joining</h3>
+        <h3 data-lang="it">Giunzione multi-materiale</h3>
+        <p class="svc-body" data-lang="en">Custom joining solutions for metal–polymer, metal–composite and metal–metal assemblies. Electrically Assisted Joining (patented), Friction Spot Welding, Laser Direct Joining, Mechanical Clinching. Applicable to aerospace and automotive-grade materials including aluminium alloys, titanium, PEEK and CFRP.</p>
+        <p class="svc-body" data-lang="it">Soluzioni di giunzione custom per assemblati metallo–polimero, metallo–composito e metallo–metallo. Electrically Assisted Joining (brevettato), Friction Spot Welding, Laser Direct Joining, Clinching meccanico. Applicabile a materiali aerospace e automotive inclusi leghe Al, titanio, PEEK e CFRP.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 03</div>
+        <div class="svc-num" data-lang="it">Servizio 03</div>
+        <h3 data-lang="en">Additive manufacturing — process &amp; qualification</h3>
+        <h3 data-lang="it">Additive manufacturing — processo e qualifica</h3>
+        <p class="svc-body" data-lang="en">Process development and component qualification for Binder Jetting, FDM, SLS, SLA, DLP, DED. High-performance technopolymers (PEEK, ULTEM, PAEK). Non-destructive characterisation methodologies and laser surface finishing.</p>
+        <p class="svc-body" data-lang="it">Sviluppo di processo e qualifica componenti per Binder Jetting, FDM, SLS, SLA, DLP, DED. Tecnopolimeri ad alte prestazioni (PEEK, ULTEM, PAEK). Metodologie di caratterizzazione non distruttiva e finitura laser superficiale.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 04</div>
+        <div class="svc-num" data-lang="it">Servizio 04</div>
+        <h3 data-lang="en">Critical materials recycling &amp; recovery</h3>
+        <h3 data-lang="it">Riciclo e recupero materie prime critiche</h3>
+        <p class="svc-body" data-lang="en">Thermomechanical recycling of thermoplastics, recovery of critical raw materials from end-of-life electronics and machining waste, laser and waterjet dismantling, characterisation of recycled-content materials for re-use qualification.</p>
+        <p class="svc-body" data-lang="it">Riciclo termomeccanico di termoplastici, recupero materie prime critiche da elettronica a fine vita e truciolo, smontaggio laser e waterjet, caratterizzazione materiali con contenuto riciclato per qualifica al riutilizzo.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 05</div>
+        <div class="svc-num" data-lang="it">Servizio 05</div>
+        <h3 data-lang="en">Surface functionalisation &amp; materials engineering</h3>
+        <h3 data-lang="it">Funzionalizzazione superficiale e ingegneria dei materiali</h3>
+        <p class="svc-body" data-lang="en">Laser-based surface functionalisation, coatings and surface treatments to improve adhesion between dissimilar materials, tribological performance, corrosion resistance and thermal behaviour. Applied to metals, polymers and composites for joining and structural applications.</p>
+        <p class="svc-body" data-lang="it">Funzionalizzazione laser, coating e trattamenti superficiali per migliorare adesione tra materiali dissimili, prestazioni tribologiche, resistenza alla corrosione e comportamento termico. Applicato a metalli, polimeri e compositi per applicazioni di giunzione e strutturali.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num" data-lang="en">Service 06</div>
+        <div class="svc-num" data-lang="it">Servizio 06</div>
+        <h3 data-lang="en">Structural &amp; process simulation</h3>
+        <h3 data-lang="it">Simulazione strutturale e di processo</h3>
+        <p class="svc-body" data-lang="en">Numerical modelling of manufacturing processes (forming, joining, additive manufacturing) and structural FEM analysis of components and assemblies. Experimental calibration of constitutive material models. Digital Image Correlation (DIC) for full-field strain measurement and model validation.</p>
+        <p class="svc-body" data-lang="it">Modellazione numerica di processi manifatturieri (formatura, giunzione, AM) e analisi FEM strutturale di componenti e assemblati. Calibrazione sperimentale di modelli costitutivi del materiale. Digital Image Correlation (DIC) per misura del campo di deformazione e validazione dei modelli.</p>
+      </div>
+    </div>
+
+    <!-- PATENT PORTFOLIO -->
+    <div style="margin-top:24px;">
+      <div class="patent-header">
+        <div class="patent-header-left">
+          <div class="patent-header-label" data-lang="en">Proprietary technology</div>
+          <div class="patent-header-label" data-lang="it">Tecnologia proprietaria</div>
+          <div class="patent-header-title" data-lang="en">Patent portfolio — Joining of dissimilar materials</div>
+          <div class="patent-header-title" data-lang="it">Portafoglio brevetti — Giunzione di materiali dissimili</div>
+        </div>
+        <div class="patent-header-count" data-lang="en">5 granted patents</div>
+        <div class="patent-header-count" data-lang="it">5 brevetti rilasciati</div>
+      </div>
+      <div class="patent-list">
+
+        <div class="patent-item">
+          <div class="patent-nr">IT 102018<br>000010611</div>
+          <div class="patent-body">
+            <div class="patent-name" data-lang="en">Joining of two conductive materials with different melting points (metal–metal)</div>
+            <div class="patent-name" data-lang="it">Giunzione di due materiali conduttori con differente temperatura di fusione (metallo–metallo)</div>
+            <div class="patent-meta" data-lang="en">Filed 27/11/2018 · F. Lambiase, A. Paoletti · European extension granted <span class="patent-eu">EP 192119386</span></div>
+            <div class="patent-meta" data-lang="it">Depositato 27/11/2018 · F. Lambiase, A. Paoletti · Estensione europea concessa <span class="patent-eu">EP 192119386</span></div>
+          </div>
+          <div class="patent-link"><a href="https://patents.google.com/patent/ES2909002T3/en" target="_blank" rel="noopener">Google Patents ↗</a></div>
+        </div>
+
+        <div class="patent-item">
+          <div class="patent-nr">IT 102019<br>000010503</div>
+          <div class="patent-body">
+            <div class="patent-name" data-lang="en">Joining of two materials, at least one of which is conductive (metal–polymer / composite, external element)</div>
+            <div class="patent-name" data-lang="it">Giunzione di due materiali di cui almeno uno conduttore (metallo–polimero / composito, elemento esterno)</div>
+            <div class="patent-meta" data-lang="en">Filed 01/07/2019 · F. Lambiase, A. Paoletti</div>
+            <div class="patent-meta" data-lang="it">Depositato 01/07/2019 · F. Lambiase, A. Paoletti</div>
+          </div>
+          <div class="patent-link"><a href="https://patents.google.com/patent/IT201900010503A1/en" target="_blank" rel="noopener">Google Patents ↗</a></div>
+        </div>
+
+        <div class="patent-item">
+          <div class="patent-nr">IT 102020<br>000001297</div>
+          <div class="patent-body">
+            <div class="patent-name" data-lang="en">Joining of two non-conductive materials via an external conductive element</div>
+            <div class="patent-name" data-lang="it">Giunzione di due materiali non conduttori mediante elemento esterno conduttore</div>
+            <div class="patent-meta" data-lang="en">Filed 23/01/2020 · F. Lambiase, A. Di Ilio, A. Paoletti</div>
+            <div class="patent-meta" data-lang="it">Depositato 23/01/2020 · F. Lambiase, A. Di Ilio, A. Paoletti</div>
+          </div>
+          <div class="patent-link"><a href="https://patents.google.com/patent/IT202000001297A1/en" target="_blank" rel="noopener">Google Patents ↗</a></div>
+        </div>
+
+        <div class="patent-item">
+          <div class="patent-nr">IT 102020<br>000012409</div>
+          <div class="patent-body">
+            <div class="patent-name" data-lang="en">Mechanical joining of dissimilar materials — metals, thermoplastics and thermoplastic composites</div>
+            <div class="patent-name" data-lang="it">Giunzione meccanica di materiali differenti — metallici, termoplastici e compositi a matrice termoplastica</div>
+            <div class="patent-meta" data-lang="en">Filed 26/05/2020 · F. Lambiase, A. Di Ilio, A. Paoletti · European extension <span class="patent-eu">EP 102020000012409</span></div>
+            <div class="patent-meta" data-lang="it">Depositato 26/05/2020 · F. Lambiase, A. Di Ilio, A. Paoletti · Estensione europea <span class="patent-eu">EP 102020000012409</span></div>
+          </div>
+          <div class="patent-link"><a href="https://patents.google.com/patent/IT202000012409A1/en" target="_blank" rel="noopener">Google Patents ↗</a></div>
+        </div>
+
+        <div class="patent-item">
+          <div class="patent-nr">IT 102021<br>000014363</div>
+          <div class="patent-body">
+            <div class="patent-name" data-lang="en">Joining of polymer matrix fibre-reinforced composite components</div>
+            <div class="patent-name" data-lang="it">Giunzione di materiali compositi rinforzati a matrice polimerica</div>
+            <div class="patent-meta" data-lang="en">Filed 01/06/2021 · F. Lambiase, A. Paoletti</div>
+            <div class="patent-meta" data-lang="it">Depositato 01/06/2021 · F. Lambiase, A. Paoletti</div>
+          </div>
+          <div class="patent-link"><a href="https://patents.google.com/patent/IT202100014363A1/en" target="_blank" rel="noopener">Google Patents ↗</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI SOLUTIONS -->
+<section id="ai" class="alt">
+  <div class="w">
+    <p class="slabel" data-lang="en">AI engineering</p>
+    <p class="slabel" data-lang="it">Ingegneria AI</p>
+    <h2 data-lang="en">Custom AI solutions for industrial manufacturing</h2>
+    <h2 data-lang="it">Soluzioni AI customizzate per la manifattura industriale</h2>
+    <p class="ssub" data-lang="en">We build AI models trained on real process data — not generic algorithms applied to your problem. Our advantage: deep manufacturing domain expertise combined with instrumented laboratory infrastructure that generates the data your AI needs.</p>
+    <p class="ssub" data-lang="it">Sviluppiamo modelli AI addestrati su dati reali di processo — non algoritmi generici applicati al tuo problema. Il nostro vantaggio: profonda expertise nel dominio manifatturiero combinata con infrastruttura di laboratorio strumentata che genera i dati di cui la tua AI ha bisogno.</p>
+
+    <div class="ai-card">
+      <div class="ai-card-left">
+        <div class="ai-label" data-lang="en">Our approach</div>
+        <div class="ai-label" data-lang="it">Il nostro approccio</div>
+        <div class="ai-title" data-lang="en">Process-first AI.<br>Not AI applied to processes.</div>
+        <div class="ai-title" data-lang="it">AI che parte dal processo.<br>Non AI applicata al processo.</div>
+        <p class="ai-body" data-lang="en">Most industrial AI projects fail because the model doesn't understand the physics of the process. We start from instrumented experimental campaigns, build domain-specific datasets, and train models that reflect the actual cause-effect relationships in your manufacturing system.</p>
+        <p class="ai-body" data-lang="it">La maggior parte dei progetti AI industriali fallisce perché il modello non capisce la fisica del processo. Partiamo da campagne sperimentali strumentate, costruiamo dataset domain-specific e addestriamo modelli che riflettono le reali relazioni causa-effetto nel tuo sistema produttivo.</p>
+        <ul class="ai-items" data-lang="en">
+          <li>Predictive models for process quality and defect detection</li>
+          <li>Computer vision for in-line quality control</li>
+          <li>Digital twin of manufacturing processes</li>
+        </ul>
+        <ul class="ai-items" data-lang="it">
+          <li>Modelli predittivi per qualità di processo e rilevazione difetti</li>
+          <li>Computer vision per controllo qualità visivo in linea</li>
+          <li>Digital twin di processi produttivi</li>
+        </ul>
+      </div>
+      <div class="ai-card-right">
+        <div class="ai-tag">
+          <div class="ai-tag-title" data-lang="en">Predictive process models</div>
+          <div class="ai-tag-title" data-lang="it">Modelli predittivi di processo</div>
+          <div class="ai-tag-desc" data-lang="en">Predict joint quality, part defects and optimal process parameters before running production. Developed in collaboration with industrial partners in joining and AM processes.</div>
+          <div class="ai-tag-desc" data-lang="it">Predici qualità dei giunti, difetti e parametri ottimali prima della produzione. Sviluppati in collaborazione con partner industriali su processi di giunzione e AM.</div>
+        </div>
+        <div class="ai-tag">
+          <div class="ai-tag-title" data-lang="en">Computer vision quality control</div>
+          <div class="ai-tag-title" data-lang="it">Computer vision per controllo qualità</div>
+          <div class="ai-tag-desc" data-lang="en">In-line visual inspection systems trained on domain-specific defect libraries. Applied to surface defects, joint quality, and AM layer-by-layer monitoring.</div>
+          <div class="ai-tag-desc" data-lang="it">Sistemi di ispezione visiva in linea addestrati su librerie di difetti domain-specific. Applicati a difetti superficiali, qualità di giunzione e monitoraggio layer-by-layer in AM.</div>
+        </div>
+        <div class="ai-tag">
+          <div class="ai-tag-title" data-lang="en">Digital twin of manufacturing processes</div>
+          <div class="ai-tag-title" data-lang="it">Digital twin di processi produttivi</div>
+          <div class="ai-tag-desc" data-lang="en">Physics-informed digital models of your process, calibrated on experimental data from our instrumented laboratory. Enables virtual process optimisation and what-if analysis.</div>
+          <div class="ai-tag-desc" data-lang="it">Modelli digitali physics-informed del tuo processo, calibrati su dati sperimentali dal nostro laboratorio strumentato. Abilita ottimizzazione virtuale e analisi what-if.</div>
+        </div>
+        <div class="ai-diff">
+          <p class="ai-diff-text" data-lang="en">"We don't apply AI to your process. We build AI that understands your process."</p>
+          <p class="ai-diff-text" data-lang="it">"Non applichiamo AI al tuo processo. Costruiamo AI che capisce il tuo processo."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section id="equipment">
+  <div class="w">
+    <p class="slabel" data-lang="en">Infrastructure</p>
+    <p class="slabel" data-lang="it">Infrastruttura</p>
+    <h2 data-lang="en">Key equipment</h2>
+    <h2 data-lang="it">Attrezzature principali</h2>
+    <p class="ssub" data-lang="en">Selected instruments available for industrial collaborations. All equipment is fully instrumented for data acquisition — the foundation of our AI development pipeline.</p>
+    <p class="ssub" data-lang="it">Strumenti selezionati disponibili per collaborazioni industriali. Tutte le attrezzature sono completamente strumentate per acquisizione dati — la base del nostro pipeline di sviluppo AI.</p>
+
+    <div style="display:flex;flex-direction:column;gap:14px;">
+
+      <div style="border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden;">
+        <div style="background:var(--dark);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="en">Mechanical &amp; thermal testing</span>
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="it">Testing meccanico e termico</span>
+        </div>
+        <div class="equip-grid" style="border-radius:0;border:none;">
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">MTS Criterion — Universal Testing Machine  <a href="https://www.mts.com/en/products/materials/static-materials-test-systems/criterion-electromechanical" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+</div><div class="espec">50 kN · climatic chamber –130 °C / +330 °C</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">DMA 850 — TA Instruments <a href="https://www.tainstruments.com/dma-850/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+</div><div class="espec">Dynamic Mechanical Analysis</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">DSC 25 W/MDSC — TA Instruments <a href="https://www.tainstruments.com/dsc-25/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+</div><div class="espec">Differential Scanning Calorimetry</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">FLIR A615 — Thermal Camera <a href="https://www.flir.com/products/a615/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+</div><div class="espec">Up to 2000 °C · macro lens · in-process thermal imaging</div></div></div>
+<div class="equip-item">
+  <div class="edot"></div>
+  <div>
+    <div class="ename">Capillary Rheometer (custom)</div>
+    <div class="espec">MFI measurement · polymer melt characterisation</div>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden;">
+        <div style="background:var(--dark);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="en">Microscopy &amp; surface analysis</span>
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="it">Microscopia e analisi superficiale</span>
+        </div>
+        <div class="equip-grid" style="border-radius:0;border:none;">
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">SEM Philips XL30</div><div class="espec">Scanning Electron Microscope · BSE/SE imaging</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">LEICA M205 — Motorised Stereo Microscope <a href="https://www.leica-microsystems.com/products/light-microscopes/stereo-microscopes/p/leica-m205-fca/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+  <a href="https://www.leica-microsystems.com/it/prodotti/software-per-microscopi/p/leica-map/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ LEICA MAP</a>
+</div><div class="espec">3D surface reconstruction· surface metrology · LEICA MAP software</div></div></div>
+          <div class="equip-item">
+  <div class="edot"></div>
+  <div>
+    <div class="ename">LEICA DMi8 — Metallographic Microscope
+      <a href="https://www.leica-microsystems.com/products/light-microscopes/p/leica-dmi8-id/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+    </div>
+    <div class="espec">Inverted · brightfield · darkfield · DIC · polarization · metallographic analysis</div>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden;">
+        <div style="background:var(--dark);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="en">Additive manufacturing</span>
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="it">Manifattura additiva</span>
+        </div>
+        <div class="equip-grid" style="border-radius:0;border:none;">
+<div class="equip-item">
+  <div class="edot"></div>
+  <div>
+    <div class="ename">FUNMAT PRO 410 — FFF System (Up to 450°C)
+      <a href="https://www.intamsys.com/funmat-pro-410-3d-printer/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+    </div>
+    <div class="espec">PEEK · PAEK · ULTEM · Carbon Reinforced </div>
+  </div>
+</div>          <div class="equip-item"><div class="edot"></div><div><div class="ename">FDM · SLA · DLP systems</div><div class="espec">Standard and engineering polymers</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">Custom filament extruder</div><div class="espec">Custom compound filament production</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">Plastic injection moulding machine</div><div class="espec">Thermoplastic components</div></div></div>
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden;">
+        <div style="background:var(--dark);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="en">Advanced processes &amp; joining</span>
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="it">Processi avanzati e giunzione</span>
+        </div>
+        <div class="equip-grid" style="border-radius:0;border:none;">
+<div class="equip-item">
+  <div class="edot"></div>
+  <div>
+    <div class="ename">Pulsed Fibre Laser — Ablation
+      <a href="https://www.lasit.it/sistema-di-marcatura-laser/compactmark-g8/" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+    </div>
+    <div class="espec">Up to 30 kW peak power · surface treatment · dismantling</div>
+  </div>
+</div>          <div class="equip-item"><div class="edot"></div><div><div class="ename">Abrasive Waterjet Machine</div><div class="espec">Multi-material cutting and dismantling</div></div></div>
+<div class="equip-item">
+  <div class="edot"></div>
+  <div>
+    <div class="ename">ABB IRB 2600 — Industrial Robot
+      <a href="https://new.abb.com/products/robotics/robots/articulated-robots/irb-2600" target="_blank" rel="noopener" style="font-size:11px;color:var(--gold-dk);margin-left:6px;">↗ specs</a>
+    </div>
+    <div class="espec">Process automation · joining applications</div>
+  </div>
+</div>          
+        </div>
+      </div>
+
+      <div style="border:1px solid var(--brd);border-radius:var(--rl);overflow:hidden;">
+        <div style="background:var(--dark);padding:10px 18px;display:flex;align-items:center;gap:10px;">
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="en">AI &amp; digital infrastructure</span>
+          <span style="font-size:10px;font-weight:800;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;" data-lang="it">Infrastruttura AI e digitale</span>
+        </div>
+        <div class="equip-grid" style="border-radius:0;border:none;">
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">GPU AI Workstation</div><div class="espec">Deep learning · model training · process optimisation</div></div></div>
+          <div class="equip-item"><div class="edot"></div><div><div class="ename">DIC — Digital Image Correlation</div><div class="espec">Full-field strain and deformation mapping</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN CTA -->
+<div style="background:var(--dark);padding:28px;text-align:center;border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);">
+  <p style="font-size:11px;font-weight:800;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;" data-lang="en">Stay connected</p>
+  <p style="font-size:11px;font-weight:800;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;margin-bottom:8px;" data-lang="it">Rimani aggiornato</p>
+  <p style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:16px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6;" data-lang="en">Follow our research activity, industrial projects and new developments on LinkedIn.</p>
+  <p style="font-size:14px;color:rgba(255,255,255,0.65);margin-bottom:16px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.6;" data-lang="it">Segui le nostre attività di ricerca, i progetti industriali e i nuovi sviluppi su LinkedIn.</p>
+  <a href="https://www.linkedin.com/in/francesco-lambiase-2670b688/" target="_blank" rel="noopener" style="display:inline-block;background:var(--gold);color:var(--dark);font-size:13px;font-weight:700;padding:10px 24px;border-radius:var(--r);letter-spacing:0.02em;" data-lang="en">Follow on LinkedIn</a>
+  <a href="https://www.linkedin.com/in/francesco-lambiase-2670b688/" target="_blank" rel="noopener" style="display:inline-block;background:var(--gold);color:var(--dark);font-size:13px;font-weight:700;padding:10px 24px;border-radius:var(--r);letter-spacing:0.02em;" data-lang="it">Segui su LinkedIn</a>
+</div>
+
+<!-- SECTORS -->
+<section id="sectors" class="alt">
+  <div class="w">
+    <p class="slabel" data-lang="en">Experience</p>
+    <p class="slabel" data-lang="it">Esperienza</p>
+    <h2 data-lang="en">Industrial sectors &amp; partners</h2>
+    <h2 data-lang="it">Settori industriali e partner</h2>
+    <p class="ssub" data-lang="en">Selected activities and partners from ongoing and completed collaborations in the context of publicly funded national and European projects.</p>
+    <p class="ssub" data-lang="it">Attività e partner selezionati da collaborazioni in corso e concluse nell'ambito di progetti finanziati nazionali ed europei.</p>
+    <div class="sec-grid">
+      <div class="sec-card">
+        <div class="sec-name">Aerospace</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Structural joining of aerospace Al alloys and titanium</li>
+          <li>Characterisation of PEEK and PEI structural components</li>
+          <li>AM of long-fibre composite structures</li>
+          <li>Electrically Assisted Joining for dissimilar material assemblies</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Giunzione strutturale leghe Al aerospace e titanio</li>
+          <li>Caratterizzazione componenti strutturali PEEK e PEI</li>
+          <li>AM di strutture composite a fibra lunga</li>
+          <li>Electrically Assisted Joining per assemblati in materiali dissimili</li>
+        </ul>
+      </div>
+      <div class="sec-card">
+        <div class="sec-name">Automotive</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Process simulation for AHSS and variable-thickness steels</li>
+          <li>Testing of recycled thermoplastics for structural parts</li>
+          <li>Lightweight metal–polymer joining for body-in-white</li>
+          <li>AI-based forming process optimisation</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Simulazione processo acciai AHSS a spessore variabile</li>
+          <li>Testing termoplastici riciclati per parti strutturali</li>
+          <li>Giunzione leggera metallo–polimero per scocca</li>
+          <li>Ottimizzazione processo di formatura con AI</li>
+        </ul>
+      </div>
+      <div class="sec-card">
+        <div class="sec-name">Plastics &amp; Recycling</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Rheological characterisation (MFI, capillary rheometry)</li>
+          <li>Custom instrumentation development</li>
+          <li>AI-based process parameter optimisation</li>
+          <li>Recycling process design and material requalification</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Caratterizzazione reologica (MFI, reometria capillare)</li>
+          <li>Sviluppo strumentazione custom</li>
+          <li>Ottimizzazione parametri di processo con AI</li>
+          <li>Progettazione processi di riciclo e riqualifica materiale</li>
+        </ul>
+      </div>
+      <div class="sec-card">
+        <div class="sec-name">Additive Manufacturing</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Component qualification: Binder Jetting, FDM, SLA, DLP</li>
+          <li>Non-destructive characterisation methodologies</li>
+          <li>Process optimisation for PEEK, ULTEM, PAEK</li>
+          <li>Inverse Engineering, reDesing and Optimization</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Qualifica componenti: Binder Jetting, FDM, SLA, DLP</li>
+          <li>Metodologie di caratterizzazione non distruttiva</li>
+          <li>Ottimizzazione processo per PEEK, ULTEM, PAEK</li>
+          <li>Finitura laser superficiale di componenti AM polimerici</li>
+        </ul>
+      </div>
+      <div class="sec-card">
+        <div class="sec-name">Critical Materials &amp; Circular Economy</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Recovery of CRM from end-of-life electronics</li>
+          <li>Graphite powder recovery from machining waste</li>
+          <li>Laser and waterjet dismantling processes</li>
+          <li>AI-based sorting and material recognition</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Recupero materie prime critiche da elettronica a fine vita</li>
+          <li>Recupero polvere di grafite da truciolo di lavorazione</li>
+          <li>Processi di smontaggio laser e waterjet</li>
+          <li>Riconoscimento e classificazione materiali con AI</li>
+        </ul>
+      </div>
+      <div class="sec-card">
+        <div class="sec-name">Energy &amp; E-mobility</div>
+        <ul class="sec-list" data-lang="en">
+          <li>Joining for hybrid and EV structural components</li>
+          <li>Lightweight multi-material solutions for powertrains</li>
+          <li>Digital twin for EV battery pack joining processes</li>
+          <li>Composite structures for marine monitoring</li>
+        </ul>
+        <ul class="sec-list" data-lang="it">
+          <li>Giunzione per componenti strutturali ibridi ed EV</li>
+          <li>Soluzioni multi-materiale leggere per powertrain</li>
+          <li>Digital twin per processi di giunzione battery pack EV</li>
+          <li>Strutture composite per monitoraggio marino</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="slabel" style="margin-top:36px;" data-lang="en">Industrial partners</p>
+    <p class="slabel" style="margin-top:36px;" data-lang="it">Partner industriali</p>
+    <p class="ssub" data-lang="en">Companies and research centres we have collaborated with.</p>
+    <p class="ssub" data-lang="it">Aziende e centri di ricerca con cui abbiamo collaborato.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">Thales Alenia Space</div>
+        <div style="font-size:12px;color:var(--ter);">Aerospace &amp; Space · Project OCEANOS</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">Centro Ricerche FIAT — Stellantis</div>
+        <div style="font-size:12px;color:var(--ter);">Automotive · Project MaTIS4T</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">PROPLAST</div>
+        <div style="font-size:12px;color:var(--ter);">Plastics &amp; Materials · Project MaTIS4T</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">XERA</div>
+        <div style="font-size:12px;color:var(--ter);">ICT · Projects I-RECOVER, WEEKO</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">COMEC</div>
+        <div style="font-size:12px;color:var(--ter);">Manufacturing · Project WEEKO Factory 2.0</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">DigitalSoft</div>
+        <div style="font-size:12px;color:var(--ter);">AI &amp; Digital · Projects I-RECOVER, WEEKO</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">CAMS S.p.A.</div>
+        <div style="font-size:12px;color:var(--ter);">Automotive Manufacturing · Project DEFCOM</div>
+      </div>
+      <div style="background:var(--bgc);border:1px solid var(--brd);border-radius:var(--r);padding:14px 18px;">
+        <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:3px;">TREDDY</div>
+        <div style="font-size:12px;color:var(--ter);">Additive Manufacturing · Binder Jetting characterisation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFFILIATION -->
+<section id="affiliation">
+  <div class="w">
+    <p class="slabel" data-lang="en">Institutional affiliation</p>
+    <p class="slabel" data-lang="it">Affiliazione istituzionale</p>
+    <h2 data-lang="en">Part of the CIRTIBS network</h2>
+    <h2 data-lang="it">Parte della rete CIRTIBS</h2>
+    <div class="affil-box">
+      <div class="affil-badge">CIRTIBS</div>
+      <div class="affil-text" data-lang="en">
+        TECNOengine is affiliated with <strong><a href="https://www.cirtibs.it" target="_blank" rel="noopener">CIRTIBS</a></strong> — Centro Interuniversitario di Ricerca sulle Tecnologie Innovative per Beni Strumentali — a multi-university research centre connecting competences, laboratories and technologies for advanced materials and manufacturing processes. CIRTIBS bridges academic research and industrial application, providing access to an extended network of expertise across Italian universities.
+      </div>
+      <div class="affil-text" data-lang="it">
+        TECNOengine afferisce al <strong><a href="https://www.cirtibs.it" target="_blank" rel="noopener">CIRTIBS</a></strong> — Centro Interuniversitario di Ricerca sulle Tecnologie Innovative per Beni Strumentali — un centro di ricerca interuniversitario che mette in rete competenze, laboratori e tecnologie per materiali avanzati e processi manifatturieri. Il Prof. Francesco Lambiase è rappresentante dell'Università degli Studi dell'Aquila nel Consiglio Amministrativo del CIRTIBS. Il CIRTIBS collega ricerca accademica e applicazione industriale attraverso le università italiane.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="alt">
+  <div class="w">
+    <p class="slabel" data-lang="en">Get in touch</p>
+    <p class="slabel" data-lang="it">Contatti</p>
+    <h2 data-lang="en">Start a collaboration</h2>
+    <h2 data-lang="it">Avvia una collaborazione</h2>
+    <p class="ssub" data-lang="en">A preliminary discussion is the starting point. We listen, assess, and identify together the most appropriate path forward.</p>
+    <p class="ssub" data-lang="it">Un confronto preliminare è il punto di partenza. Ascoltiamo, valutiamo e identifichiamo insieme il percorso più appropriato."</p>
+    <div class="contact-grid">
+      <div class="contact-panel">
+        <div class="clabel" data-lang="en">Scientific coordinator</div>
+        <div class="clabel" data-lang="it">Referente scientifico</div>
+        <div class="cname">Prof. Francesco Lambiase</div>
+        <div class="crole">Associate Professor · ING-IND/16 · University of L'Aquila</div>
+        <div class="citem" id="email-display" style="cursor:pointer;color:var(--gold-dk);" onclick="revealEmail()" data-lang="en">&#9993; Click to show email</div>
+        <div class="citem" id="email-display-it" style="cursor:pointer;color:var(--gold-dk);" onclick="revealEmail()" data-lang="it">&#9993; Clicca per visualizzare email</div>
+        <div class="citem">+39 0862 434343</div>
+        <div class="citem" style="margin-top:6px;"><a href="https://www.linkedin.com/in/francesco-lambiase-2670b688/" target="_blank" rel="noopener">LinkedIn profile</a></div>
+        <div class="cnote" data-lang="en">Academic profile &amp; publications:<br>
+          <a href="https://www.ing.univaq.it/personale/scheda_personale.php?codice=385" target="_blank" rel="noopener">University of L'Aquila — staff profile</a><br>
+          <a href="https://scholar.google.com/citations?user=729U7TIAAAAJ" target="_blank" rel="noopener">Google Scholar — 5,200+ citations</a>
+        </div>
+        <div class="cnote" data-lang="it">Profilo accademico e pubblicazioni:<br>
+          <a href="https://www.ing.univaq.it/personale/scheda_personale.php?codice=385" target="_blank" rel="noopener">Università dell'Aquila — profilo docente</a><br>
+          <a href="https://scholar.google.com/citations?user=729U7TIAAAAJ" target="_blank" rel="noopener">Google Scholar — 5.200+ citazioni</a>
+        </div>
+      </div>
+      <div class="contact-panel" style="border-left:1px solid var(--brd);">
+        <div class="clabel">TECNOengine</div>
+        <div class="citem">Dipartimento di Ingegneria Industriale<br>e dell'Informazione e di Economia (DIIIE)</div>
+        <div class="citem" style="margin-top:8px;">Università degli Studi dell'Aquila</div>
+        <div class="citem" style="margin-top:8px;">Piazzale Pontieri, 1<br>67040 Monteluco di Roio (AQ), Italy</div>
+        <div class="citem" style="margin-top:12px;"><a href="https://www.cirtibs.it" target="_blank" rel="noopener">cirtibs.it</a></div>
+        <div class="cnote" data-lang="en">Member of the CIRTIBS inter-university research network.<br>Industrial collaborations welcome.<br><br><strong style="color:var(--dark);">Our approach:</strong> Our collaborations are built on shared understanding: your objectives, our expertise, a joint strategy. We don't prescribe solutions — we develop them with you.</div>
+        <div class="cnote" data-lang="it">Membro della rete di ricerca interuniversitaria CIRTIBS.<br>Collaborazioni industriali benvenute.<br><br><strong style="color:var(--dark);">Il nostro approccio:</strong> Le nostre collaborazioni si fondano su una comprensione condivisa: i tuoi obiettivi, la nostra expertise, una strategia costruita insieme. Non prescriviamo soluzioni — le sviluppiamo con te.</div>
+        <div style="margin-top:16px;">
+          <a href="capabilities.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:var(--gold);font-size:12px;font-weight:700;padding:9px 16px;border-radius:var(--r);letter-spacing:0.04em;" data-lang="en">&#8595; Download capabilities overview (PDF)</a>
+          <a href="capabilities.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:var(--gold);font-size:12px;font-weight:700;padding:9px 16px;border-radius:var(--r);letter-spacing:0.04em;" data-lang="it">&#8595; Scarica la scheda laboratorio (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 TECNOengine · University of L'Aquila ·
+    <a href="https://www.cirtibs.it" target="_blank" rel="noopener">CIRTIBS</a> ·
+    <a href="https://www.univaq.it" target="_blank" rel="noopener">univaq.it</a> ·
+    <a href="https://www.ing.univaq.it/personale/scheda_personale.php?codice=385" target="_blank" rel="noopener">Prof. Francesco Lambiase</a>
+  </p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min
